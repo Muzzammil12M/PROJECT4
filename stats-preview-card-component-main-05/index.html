@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Inter">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root{
+--Verydarkblue: hsl(233, 47%, 7%);
+--Darkdesaturatedblue: hsl(244, 38%, 16%);
+--Softviolet: hsl(277, 64%, 61%);
+--White: hsl(0, 0%, 100%);
+--Slightlytransparentwhite: hsla(0, 0%, 100%, 0.75);
+-Slightlytransparentwhite: hsla(0, 0%, 100%, 0.6);
+    }
+    body{
+      font-family:Inter ;
+      padding: 0;
+      margin: 0;
+      background-color:var(--Verydarkblue);
+      display:flex ;
+      place-content: center;
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
+    }
+    #container{
+      background-color: var(--Darkdesaturatedblue);
+      /* font-size: 15px; */
+      font-family: sans-serif;
+      max-width: 650px;
+      min-width: 415px;
+      max-height: 350px;
+      min-height: 180px;
+      display:flex ;
+      justify-content: center;
+      align-self: center;
+      border-radius: 8px;
+    }
+     
+    #content{
+      color: var(--White);
+      width:40%;
+      /* height:80%; */
+      padding-left:5%;
+      padding-right: 5%;
+      padding-bottom:0;
+      /* white-space: pre-line; */
+    }
+    #color{
+        color: var(--Softviolet);
+      }
+      p{
+        font-size: 14px;
+        color: var(--Slightlytransparentwhite);
+      }
+      h1,p{
+        margin-bottom:6px;
+      }
+      #status{
+        padding-top: -12px;
+        display: flex;
+        justify-content: space-between;
+        color: var(--Slightlytransparentwhite);
+        font-size: 13px;
+      }
+      #status div{
+       font-weight: 900;
+       font-size:19px ;
+       color: var(--White);
+      }
+    #image, img{
+      width:50%;
+      background-color: var(--Softviolet);
+      border-radius: 0 8px 8px 0;
+    }
+    img {
+      height: 100%;
+      width:100%;
+      opacity:0.4;
+    }
+    @media (max-width:490px) {
+      #container{
+      max-height: 980px;
+      min-height: 660px;
+      max-width: 320px;
+      min-width:300px;
+      display:flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-self: center;
+      border-radius: 8px;
+      overflow-x:hidden;
+    }
+    #image, img{
+      width:100%;
+      background-color: var(--Softviolet);
+      border-radius:8px 8px 0 0;
+    }
+    img {
+      content: url(images/image-header-mobile.jpg);
+      height: 100%;
+      opacity:0.4;
+    }
+    #content{
+      width:75%;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: center;
+      padding-bottom:5%;
+      text-align: center;
+    }
+      p{
+        font-size: 14px;
+        color: var(--Slightlytransparentwhite);
+      }
+      h1,p{
+        margin-bottom:0;
+      }
+      #status{
+        padding-top: 4%;
+        padding-bottom: 4%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 18px;
+        color: var(--Slightlytransparentwhite);
+        font-size: 13px;
+      }
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<div id="container">
+<div id="content">
+  <h1>Get <span id="color">insights</span> that help your business grow.</h1>
+
+ <p> Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+  experience, and overall efficiency.</p>
+  <div id="status">
+    <span><div>10k+</div> COMPANIES</span>
+    <span><div>314</div> TEMPLATES</span>
+    <span><div>12M+</div> QUERIES</span>
+  </div>
+</div>
+  <div id="image">
+<img src="./images/image-header-desktop.jpg" alt="data-analyst">
+  </div>
+ 
+</div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
